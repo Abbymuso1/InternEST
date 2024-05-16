@@ -1,6 +1,7 @@
 // ** React Imports
 "use client"
 import { ChangeEvent, forwardRef, MouseEvent, useState } from 'react'
+import PageContainer from '../dash-components/container/PageContainer';
 
 // ** MUI Imports
 import Card from '@mui/material/Card'
@@ -66,44 +67,46 @@ const FormLayoutsSeparator = () => {
     }
 
     return (
-        <Card>
-            <CardHeader title='Change Password' titleTypographyProps={{ variant: 'h6' }} />
-            <Divider sx={{ margin: 0 }} />
-            <form onSubmit={e => e.preventDefault()}>
-                <CardContent>
-                    <Grid container spacing={5}>
-                        <Grid item xs={12}>
-                            <Typography variant='body2' sx={{ fontWeight: 600 }}>
-                                Change Password
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Current Password' placeholder='Current Password' helperText="Current Password" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='New Password' placeholder='New Password' helperText="New Password" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Confirm New Password' placeholder='Confirm New Password' helperText="Confirm New Password" />
-                        </Grid>
-                    </Grid>
-                </CardContent>
+        <PageContainer title="InternEST: Change Password" description="">
+            <Card>
+                <CardHeader title='Change Password' titleTypographyProps={{ variant: 'h6' }} />
                 <Divider sx={{ margin: 0 }} />
-                <CardActions>
-                    <Button
-                        component="label"
-                        role={undefined}
-                        variant="contained"
-                        tabIndex={-1}
-                        startIcon={<EditIcon />}
-                    >
-                        Change Password
-                        <VisuallyHiddenInput type="file" />
-                    </Button>
+                <form onSubmit={e => e.preventDefault()}>
+                    <CardContent>
+                        <Grid container spacing={5}>
+                            <Grid item xs={12}>
+                                <Typography variant='body2' sx={{ fontWeight: 600 }}>
+                                    Change Password
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Current Password' placeholder='Current Password' helperText="Current Password" />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='New Password' placeholder='New Password' helperText="New Password" />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Confirm New Password' placeholder='Confirm New Password' helperText="Confirm New Password" />
+                            </Grid>
+                        </Grid>
+                    </CardContent>
+                    <Divider sx={{ margin: 0 }} />
+                    <CardActions>
+                        <Button
+                            component="label"
+                            role={undefined}
+                            variant="contained"
+                            tabIndex={-1}
+                            startIcon={<EditIcon />}
+                        >
+                            Change Password
+                            <VisuallyHiddenInput type="file" />
+                        </Button>
 
-                </CardActions>
-            </form>
-        </Card>
+                    </CardActions>
+                </form>
+            </Card>
+        </PageContainer>
     )
 }
 

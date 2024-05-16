@@ -1,7 +1,7 @@
 // ** React Imports
 "use client"
 import { ChangeEvent, forwardRef, MouseEvent, useState } from 'react'
-
+import PageContainer from '../dash-components/container/PageContainer';
 // ** MUI Imports
 import Card from '@mui/material/Card'
 import Grid from '@mui/material/Grid'
@@ -164,162 +164,164 @@ const FormLayoutsSeparator = () => {
     ];
 
     return (
-        <Card>
-            <CardHeader title='Post A Job' titleTypographyProps={{ variant: 'h6' }} />
-            <Divider sx={{ margin: 0 }} />
-            <form onSubmit={e => e.preventDefault()}>
-                <CardContent>
-                    <Grid container spacing={5}>
-                        <Grid item xs={12}>
-                            <Typography variant='body2' sx={{ fontWeight: 600 }}>
-                                Basic Information
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Job Title' placeholder='John Doe' helperText="Your title" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth
-                                id="job-type"
-                                select
-                                label="Select"
-                                defaultValue="job type"
-                                helperText="Job Type"
-                            >
-                                {jobTypes.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                        {option.label}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth
-                                id="job-category"
-                                select
-                                label="Select"
-                                defaultValue="job category"
-                                helperText="Job Category"
-                            >
-                                {jobCategories.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                        {option.label}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Location' placeholder='Location' helperText="Location" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Salary' placeholder='USD' helperText="Salary" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth
-                                id="gender"
-                                select
-                                label="Gender"
-                                defaultValue="gender"
-                                helperText="Gender"
-                            >
-                                {gender.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                        {option.label}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </Grid>
-
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth
-                                id="country"
-                                select
-                                label="Country"
-                                defaultValue=""
-                                helperText="Country"
-                            >
-                                {country.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                        {option.label}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </Grid>
-
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth
-                                id="city"
-                                select
-                                label="City"
-                                defaultValue=""
-                                helperText="City"
-                            >
-                                {city.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                        {option.label}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </Grid>
-
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Qualification' placeholder='Graduate' helperText="Qualification" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth
-                                id="experience"
-                                select
-                                label="Experience"
-                                defaultValue="experience"
-                                helperText="Experience"
-                            >
-                                {experience.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                        {option.label}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField fullWidth
-                                id="description"
-                                label="Job Description"
-                                placeholder="Detailed Information"
-                                helperText="Job Description"
-                                multiline
-                                rows={4}
-                            />
-                        </Grid>
-                    </Grid>
-                </CardContent>
+        <PageContainer title="InternEST: Post a Job" description="">
+            <Card>
+                <CardHeader title='Post A Job' titleTypographyProps={{ variant: 'h6' }} />
                 <Divider sx={{ margin: 0 }} />
-                <CardActions>
-                    <Stack gap={2} direction="row">
-                        <Button
-                            component="label"
-                            role={undefined}
-                            variant="outlined"
-                            tabIndex={-1}
-                            startIcon={<CloudUploadIcon/>}
-                        >
-                            Upload File
-                            <VisuallyHiddenInput type="file" />
-                        </Button>
-                        <Button
-                            component="label"
-                            role={undefined}
-                            variant="contained"
-                            tabIndex={-1}
-                            startIcon={<SendIcon />}
-                        >
-                            Post a Job
-                            <VisuallyHiddenInput type="file" />
-                        </Button>
-                    </Stack>
-                </CardActions>
-            </form>
-        </Card>
+                <form onSubmit={e => e.preventDefault()}>
+                    <CardContent>
+                        <Grid container spacing={5}>
+                            <Grid item xs={12}>
+                                <Typography variant='body2' sx={{ fontWeight: 600 }}>
+                                    Basic Information
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Job Title' placeholder='John Doe' helperText="Your title" />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth
+                                    id="job-type"
+                                    select
+                                    label="Select"
+                                    defaultValue="job type"
+                                    helperText="Job Type"
+                                >
+                                    {jobTypes.map((option) => (
+                                        <MenuItem key={option.value} value={option.value}>
+                                            {option.label}
+                                        </MenuItem>
+                                    ))}
+                                </TextField>
+
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth
+                                    id="job-category"
+                                    select
+                                    label="Select"
+                                    defaultValue="job category"
+                                    helperText="Job Category"
+                                >
+                                    {jobCategories.map((option) => (
+                                        <MenuItem key={option.value} value={option.value}>
+                                            {option.label}
+                                        </MenuItem>
+                                    ))}
+                                </TextField>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Location' placeholder='Location' helperText="Location" />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Salary' placeholder='USD' helperText="Salary" />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth
+                                    id="gender"
+                                    select
+                                    label="Gender"
+                                    defaultValue="gender"
+                                    helperText="Gender"
+                                >
+                                    {gender.map((option) => (
+                                        <MenuItem key={option.value} value={option.value}>
+                                            {option.label}
+                                        </MenuItem>
+                                    ))}
+                                </TextField>
+                            </Grid>
+
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth
+                                    id="country"
+                                    select
+                                    label="Country"
+                                    defaultValue=""
+                                    helperText="Country"
+                                >
+                                    {country.map((option) => (
+                                        <MenuItem key={option.value} value={option.value}>
+                                            {option.label}
+                                        </MenuItem>
+                                    ))}
+                                </TextField>
+                            </Grid>
+
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth
+                                    id="city"
+                                    select
+                                    label="City"
+                                    defaultValue=""
+                                    helperText="City"
+                                >
+                                    {city.map((option) => (
+                                        <MenuItem key={option.value} value={option.value}>
+                                            {option.label}
+                                        </MenuItem>
+                                    ))}
+                                </TextField>
+                            </Grid>
+
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Qualification' placeholder='Graduate' helperText="Qualification" />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth
+                                    id="experience"
+                                    select
+                                    label="Experience"
+                                    defaultValue="experience"
+                                    helperText="Experience"
+                                >
+                                    {experience.map((option) => (
+                                        <MenuItem key={option.value} value={option.value}>
+                                            {option.label}
+                                        </MenuItem>
+                                    ))}
+                                </TextField>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField fullWidth
+                                    id="description"
+                                    label="Job Description"
+                                    placeholder="Detailed Information"
+                                    helperText="Job Description"
+                                    multiline
+                                    rows={4}
+                                />
+                            </Grid>
+                        </Grid>
+                    </CardContent>
+                    <Divider sx={{ margin: 0 }} />
+                    <CardActions>
+                        <Stack gap={2} direction="row">
+                            <Button
+                                component="label"
+                                role={undefined}
+                                variant="outlined"
+                                tabIndex={-1}
+                                startIcon={<CloudUploadIcon />}
+                            >
+                                Upload File
+                                <VisuallyHiddenInput type="file" />
+                            </Button>
+                            <Button
+                                component="label"
+                                role={undefined}
+                                variant="contained"
+                                tabIndex={-1}
+                                startIcon={<SendIcon />}
+                            >
+                                Post a Job
+                                <VisuallyHiddenInput type="file" />
+                            </Button>
+                        </Stack>
+                    </CardActions>
+                </form>
+            </Card>
+        </PageContainer>
     )
 }
 

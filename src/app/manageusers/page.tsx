@@ -1,5 +1,6 @@
 "use client"
 import * as React from 'react';
+import PageContainer from '../dash-components/container/PageContainer';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
@@ -46,7 +47,7 @@ const initialRows: GridRowsProp = [
     {
         id: randomId(),
         name: randomTraderName(),
-        position:"Software Engineer",
+        position: "Software Engineer",
         joinDate: randomCreatedDate(),
         status: randomStatus(),
     },
@@ -102,7 +103,7 @@ function EditToolbar(props: EditToolbarProps) {
                 </Button>
             </GridToolbarContainer>
         </Card>
-  );
+    );
 }
 
 export default function Page() {
@@ -216,33 +217,35 @@ export default function Page() {
     ];
 
     return (
-        <Box
-            sx={{
-                height: 500,
-                width: '100%',
-                '& .actions': {
-                    color: 'text.secondary',
-                },
-                '& .textPrimary': {
-                    color: 'text.primary',
-                },
-            }}
-        >
-            <DataGrid
-                rows={rows}
-                columns={columns}
-                editMode="row"
-                rowModesModel={rowModesModel}
-                onRowModesModelChange={handleRowModesModelChange}
-                onRowEditStop={handleRowEditStop}
-                processRowUpdate={processRowUpdate}
-                slots={{
-                    toolbar: EditToolbar as GridSlots['toolbar'],
+        <PageContainer title="InternEST: Manage Candidates" description="">
+            <Box
+                sx={{
+                    height: 500,
+                    width: '100%',
+                    '& .actions': {
+                        color: 'text.secondary',
+                    },
+                    '& .textPrimary': {
+                        color: 'text.primary',
+                    },
                 }}
-                slotProps={{
-                    toolbar: { setRows, setRowModesModel },
-                }}
-            />
-        </Box>
+            >
+                <DataGrid
+                    rows={rows}
+                    columns={columns}
+                    editMode="row"
+                    rowModesModel={rowModesModel}
+                    onRowModesModelChange={handleRowModesModelChange}
+                    onRowEditStop={handleRowEditStop}
+                    processRowUpdate={processRowUpdate}
+                    slots={{
+                        toolbar: EditToolbar as GridSlots['toolbar'],
+                    }}
+                    slotProps={{
+                        toolbar: { setRows, setRowModesModel },
+                    }}
+                />
+            </Box>
+        </PageContainer>
     );
 }

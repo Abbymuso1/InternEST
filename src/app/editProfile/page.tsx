@@ -137,7 +137,7 @@ const SamplePage = () => {
   ];
 
   return (
-    <PageContainer title="Edit Profile" description="">
+    <PageContainer title="InternEST: Edit Profile" description="">
       <DashboardCard title="Edit Profile">
         <div>
           <Divider sx={{ margin: 0 }} />

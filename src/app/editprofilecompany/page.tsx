@@ -24,6 +24,8 @@ import { styled } from '@mui/material/styles';
 import SendIcon from '@mui/icons-material/Send';
 import EditIcon from '@mui/icons-material/Edit';
 
+import PageContainer from '../../app/dash-components/container/PageContainer';
+
 const VisuallyHiddenInput = styled('input')({
     clip: 'rect(0 0 0 0)',
     clipPath: 'inset(50%)',
@@ -134,76 +136,78 @@ const FormLayoutsSeparator = () => {
     ];
 
     return (
-        <Card>
-            <CardHeader title='Edit Profile' titleTypographyProps={{ variant: 'h6' }} />
-            <Divider sx={{ margin: 0 }} />
-            <form onSubmit={e => e.preventDefault()}>
-                <CardContent>
-                    <Grid container spacing={5}>
-                        <Grid item xs={12}>
-                            <Typography variant='body2' sx={{ fontWeight: 600 }}>
-                                Basic Information
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Company name' placeholder='Company Name' helperText="Comapny Name" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Phone' placeholder='Phone' helperText="Phone" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Email' placeholder='Email' helperText="Email" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth
-                                id="gender"
-                                select
-                                label="Gender"
-                                defaultValue="gender"
-                                helperText="Gender"
-                            >
-                                {gender.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                        {option.label}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Address' placeholder='Address' helperText="Address" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <TextField fullWidth label='Category' placeholder='Category' helperText="Category" />
-                        </Grid>
-                        
-                        <Grid item xs={12}>
-                            <TextField fullWidth
-                                id="About Us"
-                                label="About Us"
-                                placeholder="About Us"
-                                multiline
-                                rows={4}
-                                helperText="About Us"
-                            />
-                        </Grid>
-                    </Grid>
-                </CardContent>
+        <PageContainer title="InternEST: Edit Profile Company" description="">
+            <Card>
+                <CardHeader title='Edit Profile' titleTypographyProps={{ variant: 'h6' }} />
                 <Divider sx={{ margin: 0 }} />
-                <CardActions>
-                    <Button
-                        component="label"
-                        role={undefined}
-                        variant="contained"
-                        tabIndex={-1}
-                        startIcon={<EditIcon />}
-                    >
-                        Edit Profile
-                        <VisuallyHiddenInput type="file" />
-                    </Button>
+                <form onSubmit={e => e.preventDefault()}>
+                    <CardContent>
+                        <Grid container spacing={5}>
+                            <Grid item xs={12}>
+                                <Typography variant='body2' sx={{ fontWeight: 600 }}>
+                                    Basic Information
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Company name' placeholder='Company Name' helperText="Comapny Name" />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Phone' placeholder='Phone' helperText="Phone" />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Email' placeholder='Email' helperText="Email" />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth
+                                    id="gender"
+                                    select
+                                    label="Gender"
+                                    defaultValue="gender"
+                                    helperText="Gender"
+                                >
+                                    {gender.map((option) => (
+                                        <MenuItem key={option.value} value={option.value}>
+                                            {option.label}
+                                        </MenuItem>
+                                    ))}
+                                </TextField>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Address' placeholder='Address' helperText="Address" />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <TextField fullWidth label='Category' placeholder='Category' helperText="Category" />
+                            </Grid>
 
-                </CardActions>
-            </form>
-        </Card>
+                            <Grid item xs={12}>
+                                <TextField fullWidth
+                                    id="About Us"
+                                    label="About Us"
+                                    placeholder="About Us"
+                                    multiline
+                                    rows={4}
+                                    helperText="About Us"
+                                />
+                            </Grid>
+                        </Grid>
+                    </CardContent>
+                    <Divider sx={{ margin: 0 }} />
+                    <CardActions>
+                        <Button
+                            component="label"
+                            role={undefined}
+                            variant="contained"
+                            tabIndex={-1}
+                            startIcon={<EditIcon />}
+                        >
+                            Edit Profile
+                            <VisuallyHiddenInput type="file" />
+                        </Button>
+
+                    </CardActions>
+                </form>
+            </Card>
+        </PageContainer>
     )
 }
 

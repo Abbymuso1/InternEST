@@ -5,10 +5,6 @@ import Header from "../dash-layout/header/Header";
 import Sidebar from "../dash-layout/sidebar/Sidebar";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const metadata = {
-    title: 'InternEST: Applied Positions',
-};
-
 const MainWrapper = styled("div")(() => ({
     display: "flex",
     minHeight: "100vh",

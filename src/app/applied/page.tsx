@@ -220,7 +220,7 @@ export default function Page() {
     ];
 
     return (
-        <PageContainer title="" description="">
+        <PageContainer title="InternEST: Applied Positions" description="">
             <DashboardCard title="Applied Positions">
                 <div>
                     <Box
