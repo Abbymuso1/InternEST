@@ -3,7 +3,7 @@ import { styled, Container, Box, useTheme } from "@mui/material";
 import React, { useState } from "react";
 import Header from "../dash-layout/header/Header";
 import Sidebar from "../dash-layout/sidebar/Sidebar";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 const MainWrapper = styled("div")(() => ({
     display: "flex",

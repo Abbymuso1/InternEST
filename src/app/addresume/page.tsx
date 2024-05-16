@@ -5,30 +5,13 @@ import DashboardCard from '../../app/dash-components/shared/DashboardCard';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
-import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import Select from '@mui/material/Select';
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import SendIcon from '@mui/icons-material/Send';
 import { createResume } from './actions';
 
-const experience = [
-  {
-    value: '1 year',
-    label: '1 Year',
-  },
-  {
-    value: '2 years',
-    label: '2 Years',
-  },
-  {
-    value: '3 years',
-    label: '3 Years',
-  },
-];
+
 
 const SamplePage = () => {
   const [formData, setFormData] = useState({
