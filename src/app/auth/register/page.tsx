@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import RegisterIllustrationView from 'src/sections/auth/register-illustration-view';
 // ----------------------------------------------------------------------
 

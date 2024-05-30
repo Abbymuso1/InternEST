@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import CareerContactView from 'src/sections/_career/view/career-contact-view';
 
 // ----------------------------------------------------------------------

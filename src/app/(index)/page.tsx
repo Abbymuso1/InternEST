@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import CareerLandingView from 'src/sections/_career/view/career-landing-view';
 
 // ----------------------------------------------------------------------
