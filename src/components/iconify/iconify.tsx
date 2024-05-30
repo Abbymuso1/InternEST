@@ -4,10 +4,16 @@ import { forwardRef } from 'react';
 import { Icon } from '@iconify/react';
 
 import Box from '@mui/material/Box';
+import { SxProps } from '@mui/system';
 
 // ----------------------------------------------------------------------
+interface IconifyProps {
+  icon: string;
+  sx?: SxProps;
+  width: number;
+}
 
-const Iconify = forwardRef(({ icon, width = 20, sx, ...other }, ref) => (
+const Iconify = forwardRef(({ icon, width = 20, sx, ...other }: IconifyProps, ref) => (
   <Box
     ref={ref}
     component={Icon}
@@ -17,11 +23,5 @@ const Iconify = forwardRef(({ icon, width = 20, sx, ...other }, ref) => (
     {...other}
   />
 ));
-
-Iconify.propTypes = {
-  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  sx: PropTypes.object,
-  width: PropTypes.number,
-};
 
 export default Iconify;

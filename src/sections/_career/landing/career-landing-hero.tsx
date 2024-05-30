@@ -10,26 +10,22 @@ import Typography from '@mui/material/Typography';
 import { inputClasses } from '@mui/material/Input';
 import { alpha, useTheme } from '@mui/material/styles';
 import { filledInputClasses } from '@mui/material/FilledInput';
-
 import { useResponsive } from 'src/hooks/use-responsive';
-
 import { fShortenNumber } from 'src/utils/format-number';
-
 import { _brands } from 'src/_mock';
 import { bgGradient } from 'src/theme/css';
 import CareerHeroIllustration from 'src/assets/illustrations/career-hero-illustration';
-
 import Iconify from 'src/components/iconify';
 import SvgColor from 'src/components/svg-color';
-
+//For filtering the keywords and the
 import FilterKeyword from '../filters/filter-keyword';
 import FilterLocation from '../filters/filter-location';
 
-// ----------------------------------------------------------------------
 
 export default function CareerLandingHero() {
   const theme = useTheme();
 
+ 
   const mdUp = useResponsive('up', 'md');
 
   const [filters, setFilters] = useState({

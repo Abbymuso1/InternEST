@@ -24,6 +24,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "ignoreDeprecations": "5.0",
     "plugins": [
       {
         "name": "next"

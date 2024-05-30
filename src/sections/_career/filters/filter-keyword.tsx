@@ -1,5 +1,5 @@
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -10,7 +10,14 @@ import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
-export default function FilterKeyword({ filterKeyword, onChangeKeyword, sx }) {
+interface FilterKeywordProps {
+  filterKeyword: string;
+  onChangeKeyword: (value: string | null) => void;
+  sx?: object;
+}
+
+
+export default function FilterKeyword({ filterKeyword, onChangeKeyword, sx }: FilterKeywordProps) {
   return (
     <Autocomplete
       sx={{ width: 1 }}
@@ -44,8 +51,3 @@ export default function FilterKeyword({ filterKeyword, onChangeKeyword, sx }) {
   );
 }
 
-FilterKeyword.propTypes = {
-  filterKeyword: PropTypes.string,
-  onChangeKeyword: PropTypes.func,
-  sx: PropTypes.object,
-};
