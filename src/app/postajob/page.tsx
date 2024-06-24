@@ -293,7 +293,7 @@ const FormLayoutsSeparator = () => {
                     <Divider sx={{ margin: 0 }} />
                     <CardActions>
                         <Stack gap={2} direction="row">
-                            <Button
+                            {/* <Button
                                 component="label"
                                 role={undefined}
                                 variant="outlined"
@@ -302,7 +302,7 @@ const FormLayoutsSeparator = () => {
                             >
                                 Upload File
                                 <VisuallyHiddenInput type="file" />
-                            </Button>
+                            </Button> */}
                             <Button
                                 component="label"
                                 role={undefined}

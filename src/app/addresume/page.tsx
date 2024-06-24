@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import { createResume } from './actions';
-
+import SendIcon from '@mui/icons-material/Send';
 
 
 const SamplePage = () => {
@@ -139,7 +139,7 @@ const SamplePage = () => {
                     multiline
                     rows={4}
                     name="resumeDescription"
-                    value={formData.resumeDescription}
+                    value={formData.description}
                     onChange={handleChange}
                   />
                 </Grid>

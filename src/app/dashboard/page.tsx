@@ -28,9 +28,9 @@ export default async function page() {
     return (
         <PageContainer title="InternEST: Dashboard" description="">
             <DashboardCard title="Hello, User">
-                <Grid container spacing={3}>
+                <Grid container spacing={3} sx={{ bgcolor: '#fff3e0', padding: 3 }}>
                     <Grid item sm={4}>
-                        <Card sx={{ width: 275, bgcolor: '#F8DDA4' }}>
+                        <Card sx={{ width: 275, bgcolor: 'white' }}>
                             <CardContent>
                                 <Typography sx={{ fontSize: 20, fontWeight: 'bold' }} color="#7C809B" gutterBottom>
                                     Add Resume
@@ -48,7 +48,7 @@ export default async function page() {
                         </Card>
                     </Grid>
                     <Grid item sm={4}>
-                        <Card sx={{ width: 275, bgcolor: '#F8DDA4' }}>
+                        <Card sx={{ width: 275, bgcolor: 'white' }}>
                             <CardContent>
                                 <Typography sx={{ fontSize: 20, fontWeight: 'bold' }} color="#7C809B" gutterBottom>
                                     View Applied Positions
@@ -66,7 +66,7 @@ export default async function page() {
                         </Card>
                     </Grid>
                     <Grid item sm={4}>
-                        <Card sx={{ width: 275, bgcolor: '#F8DDA4' }}>
+                        <Card sx={{ width: 275, bgcolor: 'white' }}>
                             <CardContent>
                                 <Typography sx={{ fontSize: 20, fontWeight: 'bold' }} color="#7C809B" gutterBottom>
                                     Edit Profile
